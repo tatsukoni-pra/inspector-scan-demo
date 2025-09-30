@@ -23,7 +23,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: src
-          file: ./Dockerfile
           push: false
           tags: app:latest
           load: true
