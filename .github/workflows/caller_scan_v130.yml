@@ -31,3 +31,11 @@ jobs:
   scan_call_6:
     uses: ./.github/workflows/scan_v130.yml
     secrets: inherit
+
+  scan_call_7:
+    uses: ./.github/workflows/scan_v130.yml
+    secrets: inherit
+
+  scan_call_8:
+    uses: ./.github/workflows/scan_v130.yml
+    secrets: inherit
