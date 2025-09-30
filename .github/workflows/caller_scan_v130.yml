@@ -13,13 +13,17 @@ jobs:
     secrets: inherit
 
   scan_call_2:
-    uses: ./.github/workflows/scan_latest.yml
+    uses: ./.github/workflows/scan_v130.yml
     secrets: inherit
 
   scan_call_3:
-    uses: ./.github/workflows/scan_latest.yml
+    uses: ./.github/workflows/scan_v130.yml
     secrets: inherit
 
   scan_call_4:
-    uses: ./.github/workflows/scan_latest.yml
+    uses: ./.github/workflows/scan_v130.yml
+    secrets: inherit
+
+  scan_call_5:
+    uses: ./.github/workflows/scan_v130.yml
     secrets: inherit
