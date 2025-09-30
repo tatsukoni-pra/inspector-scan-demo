@@ -3,6 +3,10 @@ name: Caller Scan Container Image v1.3.0
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   scan_call:
     name: Call Scan v1.3.0
