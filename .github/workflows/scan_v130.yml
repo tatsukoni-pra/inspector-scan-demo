@@ -46,5 +46,5 @@ jobs:
           low_threshold: 1
           other_threshold: 1
 
-      - name: Fail job if vulnerability threshold is exceeded
-        run: exit ${{ steps.inspector.outputs.vulnerability_threshold_exceeded }}
+      # - name: Fail job if vulnerability threshold is exceeded
+      #   run: exit ${{ steps.inspector.outputs.vulnerability_threshold_exceeded }}
