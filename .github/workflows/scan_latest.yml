@@ -1,4 +1,4 @@
-name: Build & Scan Container Image v1.3.0
+name: Build & Scan Container Image Latest
 
 on:
   workflow_call:
@@ -35,7 +35,7 @@ jobs:
           role-to-assume: "arn:aws:iam::{{ secrets.AWS_ACCOUNT_ID }}:role/gha-inspector-scan-role"
 
       - name: Scan built image with Inspector
-        uses: aws-actions/vulnerability-scan-github-action-for-amazon-inspector@v1.3.0
+        uses: aws-actions/vulnerability-scan-github-action-for-amazon-inspector@v1
         id: inspector
         with:
           artifact_type: 'container'

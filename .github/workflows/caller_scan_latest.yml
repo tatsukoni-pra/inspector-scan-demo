@@ -1,0 +1,12 @@
+name: Caller Scan Container Image Latest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  scan_call:
+    uses: ./.github/workflows/scan_latest.yml
