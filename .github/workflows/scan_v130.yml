@@ -1,11 +1,12 @@
 name: Build & Scan Container Image v1.3.0
 
 on:
+  workflow_call:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build docker image
+  build_scan:
+    name: Build And Scan Container Image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout this repository

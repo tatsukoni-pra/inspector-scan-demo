@@ -1,0 +1,14 @@
+name: Caller Scan Container Image v1.3.0
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scan_call:
+    name: Call Scan v1.3.0
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+      - name: Call Build & Scan Container Image v1.3.0 workflow
+        uses: ./.github/workflows/scan_v130.yml
