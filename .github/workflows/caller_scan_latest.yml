@@ -11,3 +11,7 @@ jobs:
   scan_call:
     uses: ./.github/workflows/scan_latest.yml
     secrets: inherit
+
+  scan_call_2:
+    uses: ./.github/workflows/scan_latest.yml
+    secrets: inherit
