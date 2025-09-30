@@ -39,6 +39,7 @@ jobs:
         with:
           artifact_type: 'container'
           artifact_path: 'app:latest' # make sure this matches the image you built
+          display_vulnerability_findings: "enabled"
           critical_threshold: 1
           high_threshold: 1
           medium_threshold: 1
