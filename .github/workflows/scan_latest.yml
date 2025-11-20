@@ -41,10 +41,6 @@ jobs:
           artifact_path: 'app:latest' # make sure this matches the image you built
           display_vulnerability_findings: "enabled"
           critical_threshold: 1
-          high_threshold: 1
-          medium_threshold: 1
-          low_threshold: 1
-          other_threshold: 1
 
-      # - name: Fail job if vulnerability threshold is exceeded
-      #   run: exit ${{ steps.inspector.outputs.vulnerability_threshold_exceeded }}
+      - name: Fail job if vulnerability threshold is exceeded
+        run: exit ${{ steps.inspector.outputs.vulnerability_threshold_exceeded }}
