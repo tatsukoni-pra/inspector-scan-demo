@@ -118,7 +118,7 @@ app.get('/health', (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Vulnerable demo app listening at http://localhost:${port}`);
   console.log('WARNING: This application contains intentional vulnerabilities for security scanning demonstration !');
-  console.log('DO NOT deploy this application in production!');
+  console.log('DO NOT deploy this application in production');
 });
 
 export default app;
