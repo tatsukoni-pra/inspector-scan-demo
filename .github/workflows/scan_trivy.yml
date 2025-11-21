@@ -1,0 +1,37 @@
+name: Scan with Trivity
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  trivy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Set up docker build prereqs (Buildx)
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: src
+          push: false
+          tags: test-${{ github.sha }}
+          load: true
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "test-${{ github.sha }}"
+          scan-type: "image"
+          format: "table"
+          exit-code: "1"
+          # ignore-unfixed: true
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"
